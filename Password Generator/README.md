@@ -32,8 +32,7 @@ A sleek and responsive password generator built using **HTML**, **Tailwind CSS**
 
 ## 🧪 Live Demo
 
-👉 [Try it live on GitHub Pages](https://yourusername.github.io/password-generator/)  
-> *(Replace `yourusername` with your GitHub handle once deployed)*
+👉 [Try it live on GitHub Pages](https://DheetchanyaMohan.github.io/password-generator/)  
 
 ---
 
