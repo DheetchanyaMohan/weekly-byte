@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50 text-gray-900 font-poppins antialiased">
+    <div class="flex flex-col md:flex-row min-h-screen w-full">
+
+        <!-- Left Column -->
+        <div class="flex flex-col justify-center items-center w-full md:w-1/2 p-10 bg-white shadow-lg">
+            <div class="space-y-6 w-full max-w-md">
+
+                <div>
+                    <label class="block text-xl font-medium font-mono mb-1">
+                        Password Length
+                    </label>
+                    <input type="number" id="length" value="12" min="4" max="32"
+                        class="w-full px-4 py-2 border border-purple-400 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="uppercase" checked
+                        class="accent-purple-600 w-5 h-5">
+                    <label for="uppercase" class="text-m font-mono">Include UPPERCASE?</label>
+                </div>
+
+                <!-- <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="lowercase" checked
+                        class="accent-purple-600 w-5 h-5">
+                    <label for="lowercase" class="text-m font-mono">Include lowercase?</label>
+                </div> -->
+
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="numbers" checked
+                        class="accent-purple-600 w-5 h-5">
+                    <label for="lowercase" class="text-m font-mono">Include Numbers?</label>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="symbols" checked
+                        class="accent-purple-600 w-5 h-5">
+                    <label for="symbols" class="text-m font-mono">Include Symbols?</label>
+                </div>
+
+                <div class="pt-4">
+                    <button onclick="genPassword()"
+                        class="w-full bg-orange-500 hover:bg-orange-600 text-xl text-white font-semibold py-2 px-4 rounded-lg shadow transition-all duration-200">
+                        Create Password
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex flex-col justify-center items-center w-full md:w-1/2 bg-gradient-to-br from-orange-400 to-purple-700 text-white p-10">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-semibold">Your Password</h2>
+
+                <div id="password"
+                    class="text-xl bg-white text-gray-900 px-6 py-3 rounded-md font-mono break-all shadow max-w-full overflow-auto min-h-[3rem]">
+                </div>
+
+                <!-- Copy button: hidden by default -->
+                <button id="copy-btn" onclick="copyPassword()"
+                    class="hidden bg-white text-purple-700 hover:bg-purple-100 border border-purple-300 font-semibold px-4 py-2 rounded-md shadow transition-all duration-200 text-sm">
+                    Copy
+                </button>
+
+                <p id="copy-status" class="text-sm text-green-200 h-5"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
